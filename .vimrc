@@ -1,5 +1,5 @@
 " Rescenic's vimrc
-" Last Update: June 06 2020
+" Last Update: June 14 2020
 
 set nocompatible
 
@@ -107,12 +107,12 @@ let test#python#runner = 'pytest'
 "Gvim mods
 set encoding=utf-8
 set hidden
-set history=100
+set history=10000
 set mouse=a
 
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
+"set guioptions-=m "menubar
+"set guioptions-=T "toolbar
+"set guioptions-=r "scrollbar
 set guioptions-=Lo
 
 "nerd-commenter settings
