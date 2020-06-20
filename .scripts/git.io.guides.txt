@@ -1,0 +1,4 @@
+curl https://git.io/ -i -F "url=https://github.com/rescenic/FuntooWSL" -F "code=funtoowsl"
+
+https://git.io/funtoowsl
+https://git.io/rescenic
