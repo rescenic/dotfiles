@@ -1,6 +1,5 @@
 [wsl2]
-memory=4GB
+memory=2GB
 processors=2
 localhostForwarding=true
-swap=2GB
-swapFile=
+swap=0
