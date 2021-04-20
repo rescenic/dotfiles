@@ -252,9 +252,9 @@ alias ls="ls --color=auto"
 cdl()
 {
 if [ "$#" = 0 ]; then
-cd ~ && ls -ltr
+cd ~ && ls -la
 elif [ -d "$@" ]; then
-cd "$@" && ls -ltr
+cd "$@" && ls -la
 else
 echo "$@" directory not found!!!
 fi

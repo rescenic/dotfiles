@@ -1,17 +1,22 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export TERM="xterm-256color"
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-
 # Path to your oh-my-zsh installation.
-export ZSH="/home/hakim/.oh-my-zsh"
+export TERM="xterm-256color"
+export ZSH="/C/Users/Rescenic/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_MODE='nerdfont-complete'
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # History in cache file:
@@ -21,7 +26,7 @@ HISTFILE=~/.zsh_history
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -73,8 +78,8 @@ HISTFILE=~/.zsh_history
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
@@ -107,17 +112,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias l="ls -CF --color=auto"
-alias la="ls -A --color=auto"
-alias ll="ls -alF --color=auto"
-alias ls="ls --color=auto"
-
 cdl()
 {
 if [ "$#" = 0 ]; then
-cd ~ && ls -ltr
+cd ~ && ls -la
 elif [ -d "$@" ]; then
-cd "$@" && ls -ltr
+cd "$@" && ls -la
 else
 echo "$@" directory not found!!!
 fi
@@ -125,6 +125,13 @@ fi
 
 #SET YOUR ALIAS TO CD
 alias cd="cdl"
+
+alias l="ls -CF --color=auto"
+alias la="ls -A --color=auto"
+alias ll="ls -alF --color=auto"
+alias ls="ls --color=auto"
+
+alias up="pacman -Syuu"
 
 neofetch
 
