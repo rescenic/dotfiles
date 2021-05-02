@@ -1,8 +1,8 @@
 [user]
-	name = {name}
-	email = {email}
-	username = {username}
-	signingkey = {signingkey}
+	name = Muhammad Ridwan Hakim
+	email = adminrescen@gmail.com
+	username = rescenic
+	signingkey = 3501B1D0705FFC7C
 [commit]
 	gpgsign = true
 [gpg]
@@ -18,7 +18,7 @@
 	fscache = true
 	excludesfile = ~/.gitignore
 [credential]
-	helper = manager
+	helper = manager-core
 [color]
 	ui = auto
 [color "branch"]
@@ -47,7 +47,7 @@
 [gitflow "prefix"]
 	versiontag = v
 [sequence]
-	editor = interactive-rebase-tool
+	editor = "winpty /c/Users/Rescenic/.git/interactive-rebase-tool.exe"
 [alias]
 	a = add --all
 	ai = add -i
@@ -257,9 +257,13 @@
 	recentrepo = E:/Reposz/wsl-autostart
 	recentrepo = D:/laragon/www/kelasonline
 	recentrepo = D:/laragon/www/rescenic.github.io
-	recentrepo = E:/Reposz/razelnic.com
 	recentrepo = E:/Reposz/autossh
+	recentrepo = E:/Reposz/razelnic.com
 [merge]
+	tool = vimdiff
+	conflictstyle = diff3
 	summary = true
+[mergetool]
+	prompt = false
 [tag]
 	forceSignAnnotated = true

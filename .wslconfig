@@ -2,4 +2,5 @@
 memory=2GB
 processors=2
 localhostForwarding=true
+guiapplications=false
 swap=0

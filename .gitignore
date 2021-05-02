@@ -1,11 +1,11 @@
 # Compiled source #
 ###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
+#*.com
+#*.class
+#*.dll
+#*.exe
+#*.o
+#*.so
 
 # Temporary files #
 ###################
@@ -15,18 +15,18 @@
 
 # Packages #
 ############
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
+#*.7z
+#*.dmg
+#*.gz
+#*.iso
+#*.jar
+#*.rar
+#*.tar
+#*.zip
 
 # Logs #
 ######################
-*.log
+#*.log
 
 # OS generated files #
 ######################
