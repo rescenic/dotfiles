@@ -1,6 +1,8 @@
 [wsl2]
 memory=2GB
-processors=2
+processors=4
+kernelCommandLine=vsyscall=emulate
+nestedVirtualization=true
 localhostForwarding=true
 guiapplications=false
 swap=0
