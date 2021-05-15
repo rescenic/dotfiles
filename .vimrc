@@ -1,34 +1,31 @@
 " Rescenic's vimrc
-" Last Update: June 14 2020
-
-set nocompatible
-
-syntax on
+" Last Update: May 14 2021
 
 " Vundle begins here; turn off filetype temporarily
 " set the runtime path to include Vundle and initialize
+set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" plugins
-Plugin 'scrooloose/nerdtree'
+" Plugins
 Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-markdown'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'elixir-editors/vim-elixir'
 Plugin 'janko-m/vim-test'
 Plugin 'alfredodeza/coveragepy.vim'
-Plugin 'elixir-editors/vim-elixir'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'gruvbox-community/gruvbox'
 
 " let Vundle manage Vundle, required
@@ -56,6 +53,7 @@ if has("gui_running")
   endif
 endif
 
+syntax on
 set autoindent
 set bg=dark
 set backspace=indent,eol,start

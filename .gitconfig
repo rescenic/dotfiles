@@ -1,12 +1,19 @@
 [user]
-	name = Muhammad Ridwan Hakim
-	email = adminrescen@gmail.com
-	username = rescenic
-	signingkey = 3501B1D0705FFC7C
-[commit]
-	gpgsign = true
+	name = {name}
+	email = {email}
+	username = {username}
+	signingkey = {signingkey}
+[github]
+	user = rescenic
+	token = token
+[gitflow "prefix"]
+	versiontag = v
 [gpg]
 	program = "c:/Program Files (x86)/GnuPG/bin/gpg.exe"
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
 [http]
 	sslBackend = openssl
 	sslCAInfo = C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
@@ -14,7 +21,7 @@
 	sshcommand = C:/Windows/System32/OpenSSH/ssh.exe
 	editor = nano.exe
 	longpaths = true
-	autocrlf = true
+	autocrlf = false
 	fscache = true
 	excludesfile = ~/.gitignore
 [credential]
@@ -41,11 +48,12 @@
 	prompt = false
 [diff "astextplain"]
 	textconv = astextplain
-[github]
-	user = rescenic
-	token = token
-[gitflow "prefix"]
-	versiontag = v
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+	summary = true
+[mergetool]
+	prompt = false
 [sequence]
 	editor = "winpty /c/Users/Rescenic/.git/interactive-rebase-tool.exe"
 [alias]
@@ -259,11 +267,3 @@
 	recentrepo = D:/laragon/www/rescenic.github.io
 	recentrepo = E:/Reposz/autossh
 	recentrepo = E:/Reposz/razelnic.com
-[merge]
-	tool = vimdiff
-	conflictstyle = diff3
-	summary = true
-[mergetool]
-	prompt = false
-[tag]
-	forceSignAnnotated = true

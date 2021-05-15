@@ -3,15 +3,20 @@
 	email = {email}
 	username = {username}
 	signingkey = {signingkey}
+[github]
+	user = rescenic
+	token = token
+[gitflow "prefix"]
+	versiontag = v
 [commit]
 	gpgsign = true
+[tag]
+	forceSignAnnotated = true
 [core]
 	editor = vim
 	longpaths = true
-	autocrlf = true
+	autocrlf = false
 	excludesfile = ~/.gitignore
-[credential]
-	helper = manager
 [color]
 	ui = auto
 [color "branch"]
@@ -32,11 +37,8 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
-[github]
-	user = rescenic
-	token = token
-[gitflow "prefix"]
-	versiontag = v
+[merge]
+	summary = true
 [sequence]
 	editor = interactive-rebase-tool
 [alias]
@@ -243,7 +245,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[merge]
-	summary = true
-[tag]
-	forceSignAnnotated = true
