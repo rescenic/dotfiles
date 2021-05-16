@@ -7,6 +7,11 @@
 
 # ~/.bashrc: executed by bash(1) for interactive shells.
 
+# Launch zsh Shell
+if [ -t 1 ]; then
+exec zsh
+fi
+
 # The copy in your home directory (~/.bashrc) is yours, please
 # feel free to customise it to create a shell
 # environment to your liking.  If you feel a change
