@@ -13,41 +13,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-dadbod'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/gem-browse'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-tbone'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-characterize'
-Plugin 'vim-scripts/dbext.vim'
-Plugin 'preservim/nerdcommenter'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'scrooloose/nerdtree-project-plugin'
-Plugin 'PhilRunninger/nerdtree-visual-selection'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'janko-m/vim-test'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'elixir-editors/vim-elixir'
 
 " Themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
 
 call vundle#end()
@@ -65,8 +39,8 @@ set lazyredraw              " Don't update the display while executing macros.
 set ttyfast                 " Send more characters at a given time.
 
 " History & file handling settings
-set history=999           " Increase history (default = 20).
-set undolevels=999          " More undo (default=100).
+set history=99              " Increase history (default = 20).
+set undolevels=99           " More undo (default=100).
 set autoread                " Reload files if changed externally.
 
 " Backup settings
@@ -90,15 +64,6 @@ set nostartofline               " Make j/k respect the columns
 set timeoutlen=1000             " How long it wait for mapped commands.
 set ttimeoutlen=100             " Faster timeout for escape key and others.
 
-" Use a bar-shaped cursor for insert mode, even through tmux.
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
 " ----------------------------------------------------------------------------
 " UI
 " ----------------------------------------------------------------------------
@@ -114,23 +79,6 @@ let g:airline_highlighting_cache = 1
 
 " vim-tmuxline
 let g:tmuxline_preset = 'full'
-
-" gVim - maximized window - default columns=94 lines=54
-if has("gui_running")
-	set guifont=Hack_NF:h8:b
-	set columns=999
-	
-	
-	
-	" toolbar and scrollbars
-    set guioptions-=T       " Remove toolbar.
-    set guioptions+=L       " Add left scroll bar.
-    set guioptions+=r       " Add right scroll bar.
-    "set guioptions+=b      " Add bottom scroll bar.
-    "set guioptions-=h      " Only calculate bottom scroll size of current line
-    set shortmess=atI       " Don't show the intro message at start and
-                            "   truncate msgs (avoid press ENTER msgs).
-endif
 
 set mouse=a
 set cursorline              " Highlight current line.
@@ -150,15 +98,6 @@ set scrolloff=5             " Start scrolling n lines before horizontal
 set sidescrolloff=7         " Start scrolling n chars before end of screen.
 set sidescroll=1            " The minimal number of columns to scroll
                             "   horizontally.
-
-" Add useful stuff to title bar (file name, flags, cwd)
-if has('title') && (has('gui_running') || &title)
-    set titlestring=
-    set titlestring+=%f
-    set titlestring+=%h%m%r%w
-    set titlestring+=\ -\ %{v:progname}
-    set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')}
-endif
 
 " --- command completion ---
 set wildmenu                " Hitting TAB in command mode will
@@ -205,9 +144,9 @@ set tabstop=4                   " Tab is 4 spaces.
 set shiftwidth=4                " The # of spaces for indenting.
 set smarttab                    " At start of line, <Tab> inserts shift width
                                 "   spaces, <Bs> deletes shift width spaces.
-set wrap                       " Wrap lines.
+set wrap                        " Wrap lines.
 set textwidth=94
-set colorcolumn=+1             " Show large lines
+set colorcolumn=+1              " Show large lines
 set lines=52
 set formatoptions=qrn1          " Automatic formating.
 set formatoptions-=o            " Don't start new lines w/ comment leader on
@@ -229,13 +168,6 @@ let NERDTreeHighlightCursorline=1   " Highlight the selected entry in the tree.
 let NERDTreeShowLineNumbers=0
 let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
-
-" --- NERDCommenter ---
-let NERDSpaceDelims=1               " Space around delimiters.
-let NERDRemoveExtraSpaces=1
-let g:NERDCustomDelimiters = {
-    \ 'scss': { 'left': '//' }
-\ }
 
 " --- vim-devicons ---
 " loading the plugin
@@ -286,29 +218,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" vim-test
-nmap <silent> <leader>t : TestNearest<CR>
-nmap <silent> <leader>T : TestFile<CR>
-nmap <silent> <leader>a : TestSuite<CR>
-nmap <silent> <leader>l : TestLast<CR>
-nmap <silent> <leader>v : TestVisit<CR>
-
 " vim-buffer
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bd<cr>
-
-" Highlight long lines
-augroup vimrc_autocmds
-  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#111111
-  autocmd BufEnter * match OverLength /\%>74v.\+/
-augroup END
-
-" Maximized window
-autocmd GUIEnter * simalt ~x
-
-" NERDTree at startup 
-autocmd VimEnter * NERDTree | wincmd p
 
 " Remove all trailing whitespace by pressing F4
 noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
