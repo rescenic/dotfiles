@@ -4,6 +4,7 @@
 " Vundle begins here; turn off filetype temporarily
 " Set the runtime path to include Vundle and initialize
 set nocompatible
+set viminfo=%,\"100,'10,/50,:100,h,f0,n~/.viminfo
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -225,6 +226,7 @@ let NERDTreeShowBookmarks=0         " Show bookmarks on startup.
 let NERDTreeHighlightCursorline=1   " Highlight the selected entry in the tree.
 let NERDTreeShowLineNumbers=0
 let NERDTreeMinimalUI=1
+let NERDTreeShowHidden=1
 
 " --- NERDCommenter ---
 let NERDSpaceDelims=1               " Space around delimiters.
