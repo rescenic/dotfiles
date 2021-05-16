@@ -273,6 +273,9 @@ let g:WebDevIconsTabAirLineBeforeGlyphPadding = ' '
 " -----------------------------------------------------------------------------
 " KEYS MAPPING
 " -----------------------------------------------------------------------------
+" vim-nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 " remap keys
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -297,11 +300,11 @@ augroup vimrc_autocmds
   autocmd BufEnter * match OverLength /\%>74v.\+/
 augroup END
 
-" Remove all trailing whitespace by pressing F4
-noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
-
 " Maximized window
 autocmd GUIEnter * simalt ~x
 
 " NERDTree at startup 
 autocmd VimEnter * NERDTree | wincmd p
+
+" Remove all trailing whitespace by pressing F4
+noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
