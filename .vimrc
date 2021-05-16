@@ -305,7 +305,3 @@ autocmd GUIEnter * simalt ~x
 
 " NERDTree at startup 
 autocmd VimEnter * NERDTree | wincmd p
-
-" Move tabs to the end for new, single buffers (exclude splits)
-autocmd BufNew * if winnr('$') == 1 | tabmove99 | endif
-
