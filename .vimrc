@@ -133,6 +133,11 @@ if has("gui_running")
 endif
 
 set mouse=a
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
 set cursorline              " Highlight current line.
 set laststatus=2            " Always show status line.
 set number relativenumber   " Enable relative line numbers.
@@ -206,7 +211,7 @@ set shiftwidth=4                " The # of spaces for indenting.
 set smarttab                    " At start of line, <Tab> inserts shift width
                                 "   spaces, <Bs> deletes shift width spaces.
 set wrap                       " Wrap lines.
-set textwidth=94
+set textwidth=79
 set colorcolumn=+1             " Show large lines
 set lines=52
 set formatoptions=qrn1          " Automatic formating.
