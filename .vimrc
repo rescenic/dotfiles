@@ -115,12 +115,10 @@ let g:airline_highlighting_cache = 1
 " vim-tmuxline
 let g:tmuxline_preset = 'full'
 
-" gVim - maximized window - default columns=94 lines=54
+" gVim - maximized window - default columns=94 lines=52
 if has("gui_running")
 	set guifont=Hack_NF:h8:b
-	set columns=999
-	
-	
+	set columns=94
 	
 	" toolbar and scrollbars
     set guioptions-=T       " Remove toolbar.
@@ -310,10 +308,10 @@ augroup vimrc_autocmds
 augroup END
 
 " Maximized window
-autocmd GUIEnter * simalt ~x
+" autocmd GUIEnter * simalt ~x
 
 " NERDTree at startup 
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 
 " Remove all trailing whitespace by pressing F4
 noremap <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>

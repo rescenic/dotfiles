@@ -1,0 +1,10 @@
+{
+    "lastupdate":  "2021-05-23T08:27:49.0762248+07:00",
+    "aria2-enabled":  true,
+    "aria2-retry-wait":  2,
+    "aria2-split":  5,
+    "aria2-max-connection-per-server":  5,
+    "aria2-min-split-size":  "5M",
+    "SCOOP_REPO":  "https://github.com/lukesampson/scoop",
+    "SCOOP_BRANCH":  "master"
+}

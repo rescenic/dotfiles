@@ -120,8 +120,6 @@ if has("gui_running")
 	set guifont=Hack_NF:h8:b
 	set columns=999
 	
-	
-	
 	" toolbar and scrollbars
     set guioptions-=T       " Remove toolbar.
     set guioptions+=L       " Add left scroll bar.
