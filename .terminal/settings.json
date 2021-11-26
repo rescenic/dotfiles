@@ -1,12 +1,7 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    // Add custom actions and keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
     "actions": [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
         {
             "command": {
                 "action": "copy",
@@ -15,18 +10,13 @@
             "keys": "ctrl+c"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        // Press Ctrl+Shift+F to open the search box
-        {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
         {
             "command": {
                 "action": "splitPane",
@@ -38,274 +28,26 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+    "defaultProfile": "{a5fc61e6-ef08-4857-84aa-94b04bdd4ef8}",
     "initialCols": 110,
-    "initialPosition": "0,30",
-    "initialRows": 52,
+    "initialPosition": "0,0",
+    "initialRows": 54,
     "profiles": {
         "defaults": {
-            "acrylicOpacity": 0.25,
             "closeOnExit": "graceful",
             "cursorColor": "#EB3108",
             "cursorHeight": 25,
             "cursorShape": "filledBox",
-            "fontFace": "Hack NF",
-            "fontSize": 8,
-            "fontWeight": "bold",
+            "font": {
+                "face": "Hack NF",
+                "size": 8,
+                "weight": "bold"
+            },
             "historySize": 9999,
             "padding": "0, 0, 0, 0",
             "useAcrylic": false
         },
         "list": [
-            {
-                "guid": "{1777cdf0-b2c4-5a63-a204-eb60f349ea7c}",
-                "hidden": false,
-                "name": "Alpine WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\alpine.ico",
-                "startingDirectory": "\\\\wsl$\\Alpine\\root"
-            },
-            {
-                "guid": "{39ea6185-9712-5e8c-957d-a2c6d997fc5f}",
-                "hidden": false,
-                "name": "Amazon WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\amazon.ico",
-                "startingDirectory": "\\\\wsl$\\Amazon\\root"
-            },
-            {
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "hidden": false,
-                "name": "Arch WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\artix.ico",
-                "startingDirectory": "\\\\wsl$\\Arch\\root"
-            },
-            {
-                "guid": "{8d89a9a6-1eea-50a1-b236-d45513f08881}",
-                "hidden": false,
-                "name": "CentOS 8 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\centos.ico",
-                "startingDirectory": "\\\\wsl$\\CentOS8\\root"
-            },
-            {
-                "guid": "{a0524d4f-0eaf-583b-89f9-45dcb0b49e8d}",
-                "hidden": false,
-                "name": "ClearOS WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\clearos.ico",
-                "startingDirectory": "\\\\wsl$\\ClearOS\\"
-            },
-            {
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-                "hidden": false,
-                "name": "Debian WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\debian.ico",
-                "startingDirectory": "\\\\wsl$\\Debian\\root"
-            },
-            {
-                "guid": "{7fd1043d-563c-50a7-8719-e7157ca0d572}",
-                "hidden": false,
-                "name": "Devuan WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\devuan.ico",
-                "startingDirectory": "\\\\wsl$\\Devuan\\root"
-            },
-            {
-                "guid": "{aa8efdb5-3cbe-50b2-a332-9203dc1ee217}",
-                "hidden": false,
-                "name": "Fedora WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\fedora.ico",
-                "startingDirectory": "\\\\wsl$\\Fedora\\root"
-            },
-            {
-                "guid": "{8c20f08f-2274-5b27-975a-8e62e5918093}",
-                "hidden": false,
-                "name": "Funtoo WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\funtoo.ico",
-                "startingDirectory": "\\\\wsl$\\Funtoo\\root"
-            },
-            {
-                "guid": "{1d2d9f1c-0192-5285-8115-38593c2c526e}",
-                "hidden": false,
-                "name": "Gentoo WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\gentoo.ico",
-                "startingDirectory": "\\\\wsl$\\Gentoo\\root"
-            },
-            {
-                "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
-                "hidden": false,
-                "name": "Kali Linux WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\kalilinux.ico",
-                "startingDirectory": "\\\\wsl$\\kali-linux\\root"
-            },
-            {
-                "guid": "{2d44550b-e9b0-5df4-80b7-88f7ea081275}",
-                "hidden": false,
-                "name": "openSUSE WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\opensuse.ico",
-                "startingDirectory": "\\\\wsl$\\openSUSE\\root"
-            },
-            {
-                "guid": "{5b602260-f9b9-54be-b63e-f9e95a89f141}",
-                "hidden": false,
-                "name": "RHEL WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\rhel.ico",
-                "startingDirectory": "\\\\wsl$\\RHEL\\root"
-            },
-            {
-                "guid": "{94169e20-874e-5822-9437-663cc92c8593}",
-                "hidden": false,
-                "name": "Solus WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\solus.ico",
-                "startingDirectory": "\\\\wsl$\\Solus\\root"
-            },
-            {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                "hidden": false,
-                "name": "Ubuntu 20.04 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\ubuntudark.ico",
-                "startingDirectory": "\\\\wsl$\\Ubuntu-20.04\\root"
-            },
-            {
-                "guid": "{342eaa22-06b2-5df7-b78e-a6046a4926db}",
-                "hidden": false,
-                "name": "Void WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\void.ico",
-                "startingDirectory": "\\\\wsl$\\Void\\root"
-            },
-            {
-                "guid": "{ac73a22d-256b-58dd-8d16-749c37c3aeaa}",
-                "hidden": false,
-                "name": "Artix WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\artixz.ico",
-                "startingDirectory": "\\\\wsl$\\Artix\\root"
-            },
-            {
-                "guid": "{8d46e9ab-9799-5740-82bc-0ef221a35e73}",
-                "hidden": false,
-                "name": "CentOS 6 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\centos.ico",
-                "startingDirectory": "\\\\wsl$\\CentOS6\\root"
-            },
-            {
-                "guid": "{a8202b0e-781a-5dab-98e2-e9d469a63619}",
-                "hidden": false,
-                "name": "CentOS 7 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\centos.ico",
-                "startingDirectory": "\\\\wsl$\\CentOS7\\root"
-            },
-            {
-                "guid": "{2709b704-71c7-56fc-9724-3da85648404f}",
-                "hidden": false,
-                "name": "Deepin WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\deepin.ico",
-                "startingDirectory": "\\\\wsl$\\Deepin\\root"
-            },
-            {
-                "guid": "{15b79c30-8a4a-5639-b4fc-66e8442c8bb6}",
-                "hidden": false,
-                "name": "Manjaro WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\manjaro.ico",
-                "startingDirectory": "\\\\wsl$\\Manjaro\\root"
-            },
-            {
-                "guid": "{b812b950-93ab-53dd-bef8-8f61e6f7ff64}",
-                "hidden": false,
-                "name": "Mini WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\busybox.ico",
-                "startingDirectory": "\\\\wsl$\\miniwsl\\root"
-            },
-            {
-                "guid": "{6d87b041-16cc-52b7-985d-31a0e973263d}",
-                "hidden": false,
-                "name": "Mint WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\mint.ico",
-                "startingDirectory": "\\\\wsl$\\Mint\\root"
-            },
-            {
-                "guid": "{33499495-87ba-5093-925e-3ce1a84d16d0}",
-                "hidden": false,
-                "name": "Oracle WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\oracle.ico",
-                "startingDirectory": "\\\\wsl$\\Oracle\\root"
-            },
-            {
-                "guid": "{802ac638-da66-5c78-afa2-28bf0bc5cb3f}",
-                "hidden": false,
-                "name": "SLES 12 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\suse.ico",
-                "startingDirectory": "\\\\wsl$\\SLES-12\\root"
-            },
-            {
-                "guid": "{5d4e9f74-44e5-51bf-a051-83e8f2235a91}",
-                "hidden": false,
-                "name": "SLES 15 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\suse.ico",
-                "startingDirectory": "\\\\wsl$\\SLES-15\\root"
-            },
-            {
-                "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
-                "hidden": false,
-                "name": "Ubuntu 16.04 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\ubuntu.ico",
-                "startingDirectory": "\\\\wsl$\\Ubuntu-16.04\\root"
-            },
-            {
-                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-                "hidden": false,
-                "name": "Ubuntu 18.04 WSL",
-                "source": "Windows.Terminal.Wsl",
-                "icon": "C:\\Rescenic\\ubuntugrey.ico",
-                "startingDirectory": "\\\\wsl$\\Ubuntu-18.04\\root"
-            },
-            {
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "commandline": "powershell.exe",
-                "hidden": false,
-                "name": "PowerShell 5.0"
-            },
-            {
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
-                "name": "PowerShell 7.1",
-                "source": "Windows.Terminal.PowershellCore"
-            },
-            {
-                "guid": "{a3a2e83a-884a-5379-baa8-16f193a13b21}",
-                "commandline": "C:\\PS-7.2.0\\pwsh.exe",
-                "hidden": false,
-                "name": "PowerShell 7.2",
-                "icon": "C:\\Rescenic\\pwsh-preview.ico"
-            },
-            {
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "commandline": "cmd.exe",
-                "hidden": false,
-                "name": "Command Prompt"
-            },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
@@ -313,15 +55,116 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{a5fc61e6-ef08-4857-84aa-94b04bdd4ef8}",
-                "commandline": "C:\\Windows\\System32\\cmd.exe /E:ON /K C:\\Ruby27\\bin\\setrbvars.cmd",
+                "commandline": "C:/cygwin64/bin/zsh.exe --login -i",
+                "guid": "{0daa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "icon": "C:\\cygwin64\\Cygwin-Terminal.ico",
+                "name": "Cygwin Shell",
+                "startingDirectory": "C:\\cygwin64\\home\\Rescenic"
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
-                "name": "Ruby Shell",
-                "icon": "C:\\Rescenic\\ruby.ico"
+                "name": "Git Shell",
+                "source": "Git"
+            },
+            {
+                "commandline": "cmd.exe /c \"set MSYSTEM=MSYS2&& set MSYS=winsymlinks:nativestrict&& set MSYS2_PATH_TYPE=inherit&& C:\\msys64\\usr\\bin\\zsh --login\"",
+                "guid": "{4679ef5c-274f-4999-9386-dd18c3cfdde7}",
+                "icon": "C:\\msys64\\msys2.ico",
+                "name": "MSYS2 Shell",
+                "startingDirectory": "C:\\msys64\\home\\Rescenic"
+            },
+            {
+                "commandline": "cmd.exe /c \"set MSYSTEM=MINGW32&& set MSYS=winsymlinks:nativestrict&& set MSYS2_PATH_TYPE=inherit&& C:\\msys64\\usr\\bin\\zsh --login\"",
+                "guid": "{80eec600-5a75-4332-8d07-4a6e516bc574}",
+                "icon": "C:\\msys64\\mingw32.ico",
+                "name": "MINGW32 Shell",
+                "startingDirectory": "C:\\msys64\\home\\Rescenic"
+            },
+            {
+                "commandline": "cmd.exe /c \"set MSYSTEM=MINGW64&& set MSYS=winsymlinks:nativestrict&& set MSYS2_PATH_TYPE=inherit&& C:\\msys64\\usr\\bin\\zsh --login\"",
+                "guid": "{3a692334-5ffd-472a-9606-6a6e0fa01d97}",
+                "icon": "C:\\msys64\\mingw64.ico",
+                "name": "MINGW64 Shell",
+                "startingDirectory": "C:\\msys64\\home\\Rescenic"
+            },
+            {
+                "commandline": "C:\\Windows\\System32\\cmd.exe /E:ON /K C:\\Ruby64\\bin\\setrbvars.cmd",
+                "guid": "{a5fc61e6-ef08-4857-84aa-94b04bdd4ef8}",
+                "hidden": false,
+                "icon": "C:\\Rescenic\\ruby.ico",
+                "name": "Ruby Shell"
+            },
+            {
+                "commandline": "cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Windows Shell"
+            },
+            {
+                "commandline": "powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "PowerShell 5.1"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell 7.2",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{a3a2e83a-884a-5379-baa8-16f193a13b21}",
+                "hidden": false,
+                "name": "PowerShell 7.2.rc5",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{e58ba53f-c360-5e5c-b3c7-498d490b0751}",
+                "hidden": false,
+                "name": "Yori Shell",
+                "source": "Yori"
+            },
+            {
+                "guid": "{6003b06e-79a7-5287-a934-b61d69161552}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2019",
+                "source": "Windows.Terminal.VisualStudio",
+                "icon": "%ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-180.png"
+            },
+            {
+                "guid": "{41011d21-447d-50fa-844f-44a128643cf5}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2019",
+                "source": "Windows.Terminal.VisualStudio",
+                "icon": "%ProgramFiles(x86)%\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\Assets\\VisualStudio.70x70.contrast-standard_scale-180.png"
             }
         ]
     },
     "schemes": [
+        {
+            "background": "#000000",
+            "black": "#000000",
+            "blue": "#0000AA",
+            "brightBlack": "#555555",
+            "brightBlue": "#5555FF",
+            "brightCyan": "#55FFFF",
+            "brightGreen": "#55FF55",
+            "brightPurple": "#FF55FF",
+            "brightRed": "#FF5555",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFFF55",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#00AAAA",
+            "foreground": "#AAAAAA",
+            "green": "#00AA00",
+            "name": "CGA",
+            "purple": "#AA00AA",
+            "red": "#AA0000",
+            "selectionBackground": "#FFFFFF",
+            "white": "#AAAAAA",
+            "yellow": "#AA5500"
+        },
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
