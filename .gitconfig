@@ -25,7 +25,7 @@
 	fscache = true
 	excludesfile = ~/.gitignore
 [credential]
-	helper = manager-core
+	helper = manager
 [color]
 	ui = auto
 [color "branch"]
