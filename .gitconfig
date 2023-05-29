@@ -1,28 +1,21 @@
 [user]
-	name = {name}
-	email = {email}
-	username = {username}
-	signingkey = {signingkey}
+	name = <name>
+	email = <email>
+	username = <username>
+	signingkey = <signingkey>
+[commit]
+	gpgsign = true
 [github]
-	user = rescenic
+	user = <username>
 	token = token
 [gitflow "prefix"]
 	versiontag = v
 [gpg]
-	program = "c:/Program Files (x86)/GnuPG/bin/gpg.exe"
-[commit]
-	gpgsign = true
-[tag]
-	forceSignAnnotated = true
-[http]
-	sslBackend = openssl
-	sslCAInfo = C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+	program = "C:/Users/user/scoop/apps/gpg4win/current/GnuPG/bin/gpg.exe"
 [core]
-	sshcommand = C:/Windows/System32/OpenSSH/ssh.exe
-	editor = nano.exe
+	editor = vim
 	longpaths = true
-	autocrlf = false
-	fscache = true
+	autocrlf = true
 	excludesfile = ~/.gitignore
 [credential]
 	helper = manager
@@ -46,16 +39,8 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
-[diff "astextplain"]
-	textconv = astextplain
-[merge]
-	tool = vimdiff
-	conflictstyle = diff3
-	summary = true
-[mergetool]
-	prompt = false
 [sequence]
-	editor = "winpty /c/Users/Rescenic/.git/interactive-rebase-tool.exe"
+	editor = interactive-rebase-tool
 [alias]
 	a = add --all
 	ai = add -i
@@ -260,10 +245,9 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[gui]
-	fontdiff = -family \"Hack NF\" -size 8 -weight normal -slant roman -underline 0 -overstrike 0
-	recentrepo = E:/Reposz/wsl-autostart
-	recentrepo = D:/laragon/www/kelasonline
-	recentrepo = D:/laragon/www/rescenic.github.io
-	recentrepo = E:/Reposz/autossh
-	recentrepo = E:/Reposz/razelnic.com
+[merge]
+	summary = true
+[tag]
+	forceSignAnnotated = true
+[init]
+	defaultBranch = master
