@@ -1,26 +1,21 @@
 [user]
-	name = <name>
-	email = <email>
-	username = <username>
-	signingkey = <signingkey>
+	name = Muhammad Ridwan Hakim S.T., CPITA, ITPMCP
+	email = adminrescen@gmail.com
+	username = rescenic
+	signingKey = 283887309849717600BB534E3501B1D0705FFC7C
 [commit]
 	gpgsign = true
-[github]
-	user = <username>
-	token = token
-[gitflow "prefix"]
-	versiontag = v
 [gpg]
-	#program = "C:/Users/user/scoop/apps/gpg4win/current/GnuPG/bin/gpg.exe"
+	program = C:/Users/Rescenic/scoop/apps/gpg4win/current/GnuPG/bin/gpg.exe
 	format = openpgp
 [core]
-	editor = vim
+	editor = "C:\\Users\\Rescenic\\scoop\\apps\\gitextensions\\current\\GitExtensions.exe" fileeditor
 	longpaths = true
 	autocrlf = true
 	excludesfile = ~/.gitignore
 	fileMode = false
-	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
-	#sshCommand = C:/Users/Rescenic/scoop/apps/openssh/current/ssh.exe
+	#sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+	sshCommand = C:/Users/Rescenic/scoop/apps/openssh/current/ssh.exe
 [credential]
 	helper = manager
 [color]
@@ -41,31 +36,33 @@
 	untracked = red bold
 [diff]
 	tool = vimdiff
+	guitool = tortoisediff
 [difftool]
 	prompt = false
+[github]
+	user = rescenic
+	token = token
+[gitflow "prefix"]
+	versiontag = v
 [sequence]
 	editor = interactive-rebase-tool
 [alias]
 	a = add --all
 	ai = add -i
-	#############
 	ap = apply
 	as = apply --stat
 	ac = apply --check
-	#############
 	ama = am --abort
 	amr = am --resolved
 	ams = am --skip
-	#############
 	b = branch
 	ba = branch -a
 	bd = branch -d
 	bdd = branch -D
 	br = branch -r
 	bc = rev-parse --abbrev-ref HEAD
-	bu = !git rev-parse --abbrev-ref --symbolic-full-name "@{u}"
+	bu = !git rev-parse --abbrev-ref --symbolic-full-name@{u}
 	bs = !git-branch-status
-	#############
 	c = commit
 	ca = commit -a
 	cm = commit -m
@@ -74,17 +71,14 @@
 	cd = commit --amend
 	cad = commit -a --amend
 	ced = commit --allow-empty --amend
-	#############
 	cl = clone
 	cld = clone --depth 1
 	clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
 	clgp = !sh -c 'git clone git@github.com:$1 $(basename $1)' -
 	clgu = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
-	#############
 	cp = cherry-pick
 	cpa = cherry-pick --abort
 	cpc = cherry-pick --continue
-	#############
 	d = diff
 	dp = diff --patience
 	dc = diff --cached
@@ -92,45 +86,33 @@
 	dck = diff --cached --check
 	dt = difftool
 	dct = difftool --cached
-	#############
 	f = fetch
 	fo = fetch origin
 	fu = fetch upstream
-	#############
 	fp = format-patch
-	#############
 	fk = fsck
-	#############
 	g = grep -p
-	#############
 	l = log --oneline
 	lg = log --oneline --graph --decorate
-	#############
 	ls = ls-files
 	lsf = !git ls-files | grep -i
-	#############
 	m = merge
 	ma = merge --abort
 	mc = merge --continue
 	ms = merge --skip
-	#############
 	o = checkout
 	om = checkout master
 	ob = checkout -b
 	opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
-	#############
 	pr = prune -v
-	#############
 	ps = push
 	psf = push -f
 	psu = push -u
 	pst = push --tags
-	#############
 	pso = push origin
 	psao = push --all origin
 	psfo = push -f origin
 	psuo = push -u origin
-	#############
 	psom = push origin master
 	psaom = push --all origin master
 	psfom = push -f origin master
@@ -140,29 +122,24 @@
 	psfoc = !git push -f origin $(git bc)
 	psuoc = !git push -u origin $(git bc)
 	psdc = !git push origin :$(git bc)
-	#############
 	pl = pull
 	pb = pull --rebase
-	#############
 	plo = pull origin
 	pbo = pull --rebase origin
 	plom = pull origin master
 	ploc = !git pull origin $(git bc)
 	pbom = pull --rebase origin master
 	pboc = !git pull --rebase origin $(git bc)
-	#############
 	plu = pull upstream
 	plum = pull upstream master
 	pluc = !git pull upstream $(git bc)
 	pbum = pull --rebase upstream master
 	pbuc = !git pull --rebase upstream $(git bc)
-	#############
 	rb = rebase
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase --interactive
 	rbs = rebase --skip
-	#############
 	re = reset
 	rh = reset HEAD
 	reh = reset --hard
@@ -172,7 +149,6 @@
 	remh = reset --mixed HEAD
 	resh = reset --soft HEAD
 	rehom = reset --hard origin/master
-	#############
 	r = remote
 	ra = remote add
 	rr = remote rm
@@ -188,13 +164,10 @@
 	rsu = remote show upstream
 	rpo = remote prune origin
 	rpu = remote prune upstream
-	#############
 	rmf = rm -f
 	rmrf = rm -r -f
-	#############
 	s = status
 	sb = status -s -b
-	#############
 	sa = stash apply
 	sc = stash clear
 	sd = stash drop
@@ -204,29 +177,23 @@
 	ssk = stash save -k
 	sw = stash show
 	st = !git stash list | wc -l 2>/dev/null | grep -oEi '[0-9][0-9]*'
-	#############
 	t = tag
 	td = tag -d
-	#############
 	w = show
 	wp = show -p
 	wr = show -p --no-color
-	#############
 	svnr = svn rebase
 	svnd = svn dcommit
 	svnl = svn log --oneline --show-commit
-	#############
 	subadd = !sh -c 'git submodule add git://github.com/$1 $2/$(basename $1)' -
 	subrm = !sh -c 'git submodule deinit -f -- $1 && rm -rf .git/modules/$1 && git rm -f $1' -
 	subup = submodule update --init --recursive
 	subpull = !git submodule foreach git pull --tags origin master
-	#############
 	assume = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
 	assumed = !git ls -v | grep ^h | cut -c 3-
 	unassumeall = !git assumed | xargs git unassume
 	assumeall = !git status -s | awk {'print $2'} | xargs git assume
-	#############
 	bump = !sh -c 'git commit -am \"Version bump v$1\" && git psuoc && git release $1' -
 	release = !sh -c 'git tag v$1 && git pst' -
 	unrelease = !sh -c 'git tag -d v$1 && git pso :v$1' -
@@ -236,10 +203,8 @@
 	bare = !sh -c 'git symbolic-ref HEAD refs/heads/$1 && git rm --cached -r . && git clean -xfd' -
 	whois = !sh -c 'git log -i -1 --author=\"$1\" --pretty=\"format:%an <%ae>\"' -
 	serve = daemon --reuseaddr --verbose --base-path=. --export-all ./.git
-	#############
 	behind = !git rev-list --left-only --count $(git bu)...HEAD
 	ahead = !git rev-list --right-only --count $(git bu)...HEAD
-	#############
 	ours = "!f() { git checkout --ours $@ && git add $@; }; f"
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
@@ -251,7 +216,28 @@
 	required = true
 [merge]
 	summary = true
+	guitool = tortoisemerge
 [tag]
 	forceSignAnnotated = true
 [init]
 	defaultBranch = master
+[credential "helperselector"]
+	selected = manager
+[credential "https://github.com"]
+	username = rescenic
+[safe]
+	directory = C:/Users/Rescenic
+[difftool "tortoisediff"]
+	path = C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe
+	cmd = \"C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe\" \"$LOCAL\" \"$REMOTE\"
+[mergetool "tortoisemerge"]
+	path = C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe
+	cmd = \"C:/Program Files/TortoiseGit/bin/TortoiseGitMerge.exe\" -base:\"$BASE\" -mine:\"$LOCAL\" -theirs:\"$REMOTE\" -merged:\"$MERGED\"
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+	autosquash = false
+	updateRefs = false
